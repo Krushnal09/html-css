@@ -67,7 +67,7 @@
 	<!--Mobile full-->
 
 	<!--Pre loader  -->
-	<script src="js/loader.js"></script>
+	<script src="../js/loader.js"></script>
 	<div id="loader-container">
 		<div id="loader"></div>
 	</div>
@@ -80,7 +80,7 @@
 
 		<div class="header">
 			<div class="logo" id="logo">
-				<a href="../"><img src="../images/logo.jpeg" width="130" height="43" alt=""></a>
+				<a href="../index.html"><img src="../images/logo.jpeg" width="130" height="43" alt=""></a>
 			</div>
 			<div class="social-bookmarks">
 				<!-- AddThis Button BEGIN -->
@@ -395,7 +395,7 @@
   item.addEventListener('click', function() {
     const videoUrl = this.getAttribute('data-video-url');
     const videoTitle = this.querySelector('p').textContent; // Extract title from the <p> tag
-    window.location.href = `first.html?video=${encodeURIComponent(videoUrl)}&title=${encodeURIComponent(videoTitle)}`;
+    window.location.href = `../first.html?video=${encodeURIComponent(videoUrl)}&title=${encodeURIComponent(videoTitle)}`;
   });
 });
 
