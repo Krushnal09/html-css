@@ -432,7 +432,7 @@
   item.addEventListener('click', function() {
     const videoUrl = this.getAttribute('data-video-url');
     const videoTitle = this.querySelector('p').textContent; // Extract title from the <p> tag
-    window.location.href = `./first.html?video=${encodeURIComponent(videoUrl)}&title=${encodeURIComponent(videoTitle)}`;
+    window.location.href = `/first.html?video=${encodeURIComponent(videoUrl)}&title=${encodeURIComponent(videoTitle)}`;
   });
 });
 
