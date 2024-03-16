@@ -1,20 +1,14 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var container = document.getElementById('mediaContainer');
-    var items = Array.from(container.getElementsByClassName('item'));
-
-    // Shuffle array
-    var shuffledItems = shuffle(items);
-
-    // Reorder elements in the DOM
-    shuffledItems.forEach(function(item) {
-        container.appendChild(item);
-    });
-});
-
-function shuffle(array) {
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+document.addEventListener('DOMContentLoaded', (event) => {
+    const mediaContainer = document.getElementById('mediaContainer');
+    let items = Array.from(mediaContainer.getElementsByClassName('item'));
+    
+    // Fisher-Yates Shuffle algorithm
+    for (let i = items.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [items[i], items[j]] = [items[j], items[i]]; // ES6 destructuring assignment for swapping
     }
-    return array;
-}
+    
+    // Clear the container and append the shuffled items
+    mediaContainer.innerHTML = '';
+    items.forEach(item => mediaContainer.appendChild(item));
+});
