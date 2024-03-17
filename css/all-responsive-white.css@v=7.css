@@ -1745,11 +1745,12 @@ i {
 
     height: 78%;
     width: 70%;
-     padding: 4px;
-     border-radius: 10px;
-     margin-top: 3px;
-     /* aspect-ratio: 3/4; */
-     object-fit: cover;
+    padding: 4px;
+    border-radius: 10px;
+    margin-top: 3px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+     
 }
 .item p {
   height: auto;
